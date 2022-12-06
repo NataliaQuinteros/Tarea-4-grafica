@@ -23,7 +23,8 @@ onready var camera = $Head/Camera
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
 
 # Input handling Function
 func _input(event):
@@ -54,7 +55,7 @@ func _physics_process(delta):
 	apply_gravity(delta)
 		
 	# Apply the velocity vector to the KinematicBody
-	velocity = move_and_slide(velocity, Vector3.UP, true, 4, 0.785398, false)
+	velocity = move_and_slide(velocity, Vector3.UP, true, 4, 0.785398, true)
 	velocity2d = Vector2(velocity.z, velocity.x)
 	
 	
